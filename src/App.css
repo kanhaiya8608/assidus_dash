@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.notification-icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .notification-dot {
+    position: absolute;
+    padding: 2;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+  }
+  
