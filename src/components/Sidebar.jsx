@@ -22,7 +22,7 @@ function Sidebar() {
 
 
   return (
-    <div className="relative hidden md:flex flex-col w-full h-full text-black">
+    <div className="relative hidden lg:flex flex-col w-full h-full text-black">
       <div className='flex items-center m-4 p-4  pb-8'>
         <img src={logo} alt="" className='h-10'/>
         </div>
