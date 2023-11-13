@@ -29,15 +29,6 @@ const months = [
 
 const dataop = ['Examine', 'View', 'Project'];
 
-const buttonStyle = {
-  border: '1px solid #9a6fb0',
-  borderRadius: '3px',
-  padding: '4px 8px',
-  margin: '10px 2px',
-  fontSize: 14,
-  color: '#9a6fb0',
-  opacity: 0.7,
-};
 
 const LineChartDatasetTransition = ({ width, height }) => {
   const [selectedMonth, setSelectedMonth] = useState(months[1]);

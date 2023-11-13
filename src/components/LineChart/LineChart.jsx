@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import './LineChart.css';
 import * as d3 from "d3";
 import { useSpring, animated } from "@react-spring/web";
 
@@ -64,7 +63,7 @@ const LineChart = ({ width, height, data, selectedGroup }) => {
           height={boundsHeight}
           transform={`translate(${[MARGIN.left, MARGIN.top].join(",")})`}
         >
-          <LineItem path={linePath} color={"#69b3a2"} />
+          <LineItem path={linePath} color={"#16A34A"} />
         </g>
         {/* Second is for the axes */}
         <g

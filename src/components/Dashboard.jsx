@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import LineChartDatasetTransition from './LineChart/LineChartDatasetTransition';
+import BarChart from './BarChart';
 
 function Dashboard() {
-  const [chartWidth, setChartWidth] = useState(800); // Initial width
-
+  const [modalOpen, setModalOpen] = useState(false);
+  const [chartWidth, setChartWidth] = useState(700); // Initial width
+  const BAR_CHART_DATA = [
+    { label: "Older", value: 8 },
+    { label: "Jan 01-18", value:10 },
+    { label: "Jan 09-16", value: 16 },
+    { label: "Jan 17-24", value: 9 },
+    { label: "Jan 25-31", value: 7 },
+    { label: "Present", value: 4},
+  ];
+  
   useEffect(() => {
     const handleResize = () => {
       // Adjust the width based on the screen size
@@ -11,7 +21,7 @@ function Dashboard() {
 
       // Define your own logic to set width responsively
       if (screenWidth < 600) {
-        setChartWidth(screenWidth - 20); // Adjust for padding/margin
+        setChartWidth(screenWidth); // Adjust for padding/margin
       } else if (screenWidth < 1200) {
         setChartWidth(screenWidth * 0.8); // 80% of the screen width
       } else {
@@ -34,7 +44,8 @@ function Dashboard() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 m-8">
       <LineChartDatasetTransition width={chartWidth} height={400} />
-      <LineChartDatasetTransition width={chartWidth} height={400} />
+    
+      <BarChart initialData={BAR_CHART_DATA} height={300} width={chartWidth} />
       <LineChartDatasetTransition width={chartWidth} height={400} />
       <LineChartDatasetTransition width={chartWidth} height={400} />
     </div>
