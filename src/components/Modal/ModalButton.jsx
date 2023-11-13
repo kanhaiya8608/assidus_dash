@@ -15,7 +15,7 @@ function ModalButton() {
 
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
+      <button className=" bg-blue-100 text-green-500 font-bold p-2 px-4 rounded-md" onClick={openModal}>New Sales Invoice</button>
       <Modal isOpen={modalOpen} onClose={closeModal} />
     </div>
   );

@@ -8,7 +8,7 @@ function Modal({ isOpen, onClose }) {
     <div className={`modalBackground ${isOpen ? "open" : ""}`}>
       <div className="modalContainer">
         <div className="titleCloseBtn">
-          <button onClick={onClose}>
+          <button className="p-4" onClick={onClose}>
             <FaTimes /> {/* Use the close icon */}
           </button>
         </div>

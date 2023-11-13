@@ -47,7 +47,7 @@ function Bars({ data, height, scaleX, scaleY, barWidth }) {
 
 function BarChart({ initialData, width, height }) {
   const [modalOpen, setModalOpen] = useState(false);
-  const margin = { top: 10, right: 0, bottom: 20, left: 30 };
+  const margin = { top: 10, right: 0, bottom: 20, left: 0 };
   const [data, setData] = useState(initialData);
 
   const scaleX = scaleBand()
