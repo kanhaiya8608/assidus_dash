@@ -36,7 +36,7 @@ function Dashboard() {
     },
     {
       x: "December",
-      In: 2,
+      In: 9,
       Out: 8,
     },
     {
@@ -80,7 +80,7 @@ function Dashboard() {
       <LineChartDatasetTransition width={chartWidth} height={400} />
     
       <BarChart initialData={BAR_CHART_DATA} height={300} width={chartWidth} />
-      <StackedBarplot data={bplot} width={chartWidth} height={400} />
+      <StackedBarplot data={bplot} width={chartWidth} height={300} />
       <LineChartDatasetTransition width={chartWidth} height={400} />
     </div>
   );
