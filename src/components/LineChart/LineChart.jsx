@@ -55,7 +55,7 @@ const LineChart = ({ width, height, data, selectedGroup }) => {
   }
 
   return (
-    <div className="line-chart-container">
+    <div className="line-chart-container overflow-hidden">
       <svg width={width} height={height} className="line-chart">
         {/* first group is lines */}
         <g

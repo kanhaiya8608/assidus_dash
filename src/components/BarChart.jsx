@@ -64,7 +64,7 @@ function BarChart({ initialData, width, height }) {
   }, [initialData]);
 
   return (
-    <div height={height} width={width} className="rounded-md bg-white">
+    <div height={height} width={width} className="rounded-md bg-white overflow-hidden">
       <div className="flex justify-between border-b-2 border-gray-100  p-3">
         <h1 className="p-3 text-lg font-bold ">Invoices Owed to You</h1>
         <FileUploadButton/>
