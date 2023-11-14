@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import LineChartDatasetTransition from './LineChart/LineChartDatasetTransition';
 import BarChart from './BarChart';
-
+import StackedBarplot from './StackedBarPlot';
 function Dashboard() {
-  const [modalOpen, setModalOpen] = useState(false);
+  
   const [chartWidth, setChartWidth] = useState(700); // Initial width
   const BAR_CHART_DATA = [
     { label: "Older", value: 8 },
@@ -13,6 +13,40 @@ function Dashboard() {
     { label: "Jan 25-31", value: 7 },
     { label: "Present", value: 4},
   ];
+  const bplot = [
+    {
+      x: "August",
+      In: 8,
+      Out: 12,
+    },
+    {
+      x: "September",
+      In: 12,
+      Out: 16,
+    },
+    {
+      x: "October",
+    In: 23,
+      Out: 21,
+    },
+    {
+      x: "November",
+      In: 16,
+  Out: 18,
+    },
+    {
+      x: "December",
+      In: 2,
+      Out: 8,
+    },
+    {
+      x: "January",
+      In: 12,
+      Out: 19,
+    },
+  ];
+  
+  
   
   useEffect(() => {
     const handleResize = () => {
@@ -46,7 +80,7 @@ function Dashboard() {
       <LineChartDatasetTransition width={chartWidth} height={400} />
     
       <BarChart initialData={BAR_CHART_DATA} height={300} width={chartWidth} />
-      <LineChartDatasetTransition width={chartWidth} height={400} />
+      <StackedBarplot data={bplot} width={chartWidth} height={400} />
       <LineChartDatasetTransition width={chartWidth} height={400} />
     </div>
   );

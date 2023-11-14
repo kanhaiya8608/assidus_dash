@@ -32,8 +32,8 @@ function Sidebar() {
             <li key={index} className='flex items-center justify-between hover:bg-green-600 hover:text-white p-4'>
               <NavLink to={menu.route}>
                 <div className=' flex justify-between w-full '>
-                  <div className='px-10 text-xl flex items-center'>
-                    {menu.icon({ size: 26 })} <span className=' px-5'>{menu.label}</span>
+                  <div className='px-10 text-lg flex items-center'>
+                    {menu.icon({ size: 24 })} <span className=' px-5'>{menu.label}</span>
                   </div>
                 
                 </div>
