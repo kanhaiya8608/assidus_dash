@@ -1,0 +1,7 @@
+[
+{"id":1,"Department":"Home","sales":5232.87,"ytd":4465.03},
+{"id":2,"Department":"Shoes","sales":3651.03,"ytd":300.17},
+{"id":3,"Department":"Sports","sales":0.00,"ytd":0.00},
+{"id":4,"Department":"Music","sales":5711.69,"ytd":10402.77},
+{"id":5,"Department":"Electronics","sales":2182.88,"ytd":6199.6}
+]

@@ -2,52 +2,36 @@ import React, { useState, useEffect } from 'react';
 import LineChartDatasetTransition from './LineChart/LineChartDatasetTransition';
 import BarChart from './BarChart';
 import StackedBarplot from './StackedBarPlot';
+import Table from './Table/Table';
+import BAR_CHART_DATA from '../data/BAR_CHART_DATA'
+import bplot from '../data/bplot.json'
+import dayjs from "dayjs";
+
+import MOCK_DATA from './Table/MOCK_DATA.json'
 function Dashboard() {
+
+  const columns = [
+    
+        {
+          header: "Account",
+          accessorKey: "Department",
+          
+        },
+        {
+          header: "This month",
+          accessorKey: "sales",
+          
+        },
+      
+    {
+      header: "YTD",
+      accessorKey: "ytd",
+    
+    }  ];
+
+  
   
   const [chartWidth, setChartWidth] = useState(700); // Initial width
-  const BAR_CHART_DATA = [
-    { label: "Older", value: 8 },
-    { label: "Jan 01-18", value:10 },
-    { label: "Jan 09-16", value: 16 },
-    { label: "Jan 17-24", value: 9 },
-    { label: "Jan 25-31", value: 7 },
-    { label: "Present", value: 4},
-  ];
-  const bplot = [
-    {
-      x: "August",
-      In: 8,
-      Out: 12,
-    },
-    {
-      x: "September",
-      In: 12,
-      Out: 16,
-    },
-    {
-      x: "October",
-    In: 23,
-      Out: 21,
-    },
-    {
-      x: "November",
-      In: 16,
-  Out: 18,
-    },
-    {
-      x: "December",
-      In: 9,
-      Out: 8,
-    },
-    {
-      x: "January",
-      In: 12,
-      Out: 19,
-    },
-  ];
-  
-  
-  
   useEffect(() => {
     const handleResize = () => {
       // Adjust the width based on the screen size
@@ -78,10 +62,9 @@ function Dashboard() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 m-8">
       <LineChartDatasetTransition width={chartWidth} height={400} />
-    
       <BarChart initialData={BAR_CHART_DATA} height={300} width={chartWidth} />
       <StackedBarplot data={bplot} width={chartWidth} height={300} />
-      <LineChartDatasetTransition width={chartWidth} height={400} />
+      <Table data ={MOCK_DATA} columns={columns}/>
     </div>
   );
 }

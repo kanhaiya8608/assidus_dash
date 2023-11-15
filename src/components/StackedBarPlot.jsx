@@ -80,7 +80,7 @@ const StackedBarplot = ({ width, height, data }) => {
   const legendLabels = allSubgroups.map((group) => group.replace("group", "Group "));
 
   return (
-    <div height={height} width={width} className="rounded-md bg-white">
+    <div height={height}   width={width} className="rounded-md bg-white">
       <div className="flex justify-between border-b-2 border-gray-100 p-3">
         <h1 className="p-3 text-lg font-bold ">Total Cash Flow</h1>
         <Legend colors={legendColors} labels={legendLabels} />
