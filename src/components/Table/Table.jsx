@@ -10,7 +10,7 @@ function Table({ data, columns }) {
   return (
     <div className="rounded-md bg-white overflow-hidden">
       <div className="flex justify-between border-b-2 border-gray-100 p-3">
-        <h1 className="p-3 text-lg font-bold">Invoices Owed to You</h1>
+        <h1 className="p-3 text-lg font-bold">Account watchlist</h1>
       </div>
       <div className="p-4">
         <table className="w-full table-auto border-collapse">
